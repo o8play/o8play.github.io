@@ -1,10 +1,10 @@
 
-  <!DOCTYPE HTML>
+ <!DOCTYPE HTML>
 <html >
 <head>
   <meta charset="UTF-8">
   
-    <title>Archives | 黑白說Hexo</title>
+    <title>tags | 黑白說Hexo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="黑白歐巴">
@@ -61,86 +61,43 @@
 
       </header>
       <div id="container">
-        
-
+          
 <div class="archive-title" >
-  <h2 class="archive-icon">歸檔</h2>
-  
-  <div class="archiveslist archive-float clearfix">
-   <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">4</span></li></ul>
- </div>
-  
+<h2 class="tag-icon">標簽</h2>
+
+<a data-src="/tags/HEXO/" href="#HEXO" title="HEXO">HEXO<sup>1</sup></a>
+
+<a data-src="/tags/LOGDOWN/" href="#LOGDOWN" title="LOGDOWN">LOGDOWN<sup>1</sup></a>
+
+<a data-src="/tags/Markdown/" href="#Markdown" title="Markdown">Markdown<sup>1</sup></a>
+
+<a data-src="/tags/Octopress/" href="#Octopress" title="Octopress">Octopress<sup>1</sup></a>
+
+<a data-src="/tags/blog/" href="#blog" title="blog">blog<sup>0</sup></a>
+
+<a data-src="/tags/markdown/" href="#markdown" title="markdown">markdown<sup>1</sup></a>
+
+<a data-src="/tags/o8play/" href="#o8play" title="o8play">o8play<sup>0</sup></a>
+
+<a data-src="/tags/sublime/" href="#sublime" title="sublime">sublime<sup>1</sup></a>
+
+<a data-src="/tags/vim/" href="#vim" title="vim">vim<sup>1</sup></a>
+
+<a data-src="/tags/架站/" href="#架站" title="架站">架站<sup>2</sup></a>
+
+<a data-src="/tags/網誌/" href="#網誌" title="網誌">網誌<sup>2</sup></a>
+
+<a data-src="/tags/部落格/" href="#部落格" title="部落格">部落格<sup>2</sup></a>
+
 </div>
-<div id="main" class="archive-part clearfix">
-  <div id="archive-page">
-
-  <section class="post" itemscope itemprop="blogPost">
-  
-    <a href="/2015/04/11/架Blog最頭痛的事-網站命名/" title="架Blog最頭痛的事" itemprop="url">
-  
-    <h1 itemprop="name">架Blog最頭痛的事</h1>
-    
-    <time datetime="2015-04-11T11:17:40.000Z" itemprop="datePublished">2015-04-11</time>
-  </a>
-</section>
-
-  <section class="post" itemscope itemprop="blogPost">
-  
-    <a href="/2015/04/11/HEXO-v-s-Octopress/" title="HEXO v.s. Octopress" itemprop="url">
-  
-    <h1 itemprop="name">HEXO v.s. Octopress</h1>
-    
-    <time datetime="2015-04-11T09:49:19.000Z" itemprop="datePublished">2015-04-11</time>
-  </a>
-</section>
-
-  <section class="post" itemscope itemprop="blogPost">
-  
-    <a href="/2015/04/10/熱門文字編輯器比較/" title="熱門文字編輯器比較" itemprop="url">
-  
-    <h1 itemprop="name">熱門文字編輯器比較</h1>
-    
-    <time datetime="2015-04-09T16:32:59.000Z" itemprop="datePublished">2015-04-10</time>
-  </a>
-</section>
-
-  <section class="post" itemscope itemprop="blogPost">
-  
-    <a href="/2015/04/09/為什麼會有這個網站/" title="為什麼會有這個網站" itemprop="url">
-  
-    <h1 itemprop="name">為什麼會有這個網站</h1>
-    
-    <time datetime="2015-04-09T10:08:18.000Z" itemprop="datePublished">2015-04-09</time>
-  </a>
-</section>
-
-
-  </div>
+<div id="main" class="archive-part">
+<div class="all-list-box"></div>
 </div>
+
+
+
 
       </div>
-      <footer><div id="footer" >
-	
-	<div class="line">
-		<span></span>
-		<div class="author"></div>
-	</div>
-	
-	
-	<div class="social-font clearfix">
-		
-		
-		
-		
-		
-	</div>
-		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2015 
-		
-		<a href="http://o8play.github.io" target="_blank" title="黑白歐巴">黑白歐巴</a>
-		
-		</p>
-</div>
-</footer>
       <script src="/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){ 
@@ -189,6 +146,24 @@ $(document).ready(function(){
 
 
 
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var list    = $('.archive-title a'),
+      box     = $('.all-list-box'),
+      first   = $('.archive-title a:first-of-type');
+      box.load(first.attr('data-src').toString()+' #archive-page');
+      first.addClass('current');
+  list.each(function(){
+    $(this).click(function(){
+      var listSrc=$(this).attr('data-src').toString()+' #archive-page';
+      box.load(listSrc);
+      list.removeClass('current');
+      $(this).addClass('current');
+     });  
+    });
+  }); 
+</script>
 
 
 
